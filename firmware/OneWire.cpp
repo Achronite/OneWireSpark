@@ -132,7 +132,8 @@ sample code bearing this copyright.
 
 OneWire::OneWire(uint16_t pin)
 {
-	pinMode(pin, INPUT);
+	//pinMode(pin, INPUT);
+	pinMode(pin, INPUT_PULLUP);  // PTG: use the sparks internal pullup instead of physical resistors
 	 _pin = pin;
 
 }
